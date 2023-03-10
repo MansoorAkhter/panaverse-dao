@@ -1,14 +1,15 @@
-import Wrapper from "@/components/shared/Wrapper";
 import Image from "next/image";
+import Wrapper from "@/components/shared/Wrapper";
+import Button from "@/components/shared/Button";
 import heroPoster from "../../assets/images/heroPoster.png";
-import Button from "../shared/Button";
+
 
 const Hero = () => {
     return (
-        <section className="bg-gray-100">
+        <section>
             <Wrapper>
                 <div className="flex flex-col md:flex-row items-center">
-                    <div className="flex-1 leading-normal">
+                    <div className="flex-1 leading-normal  w-[569px]">
                         <h4 className="text-[#00616C] font-semibold mt-4">
                             Presidential Initiative for Artificial Intelligence and Computing (PIAIC)
                         </h4>
@@ -16,14 +17,13 @@ const Hero = () => {
                             Certified Web 3.0 and Metaverse Developer
                         </h1>
 
-                        <p className="text-slate-600 ">
+                        <p className="text-slate-700 max-w-xl">
                             A One and Quarter Years Panaverse DAO Earn as you Learn Program Getting Ready for the Next Generation of the Internet
                         </p>
-                        <p className="text-slate-600 my-3">
+                        <p className="text-slate-700 my-3">
                             Consolidating Web 3.0, Metaverse, Artificial Intelligence (AI), Cloud, Edge, Ambient Computing/IoT, Network Automation, and Bioinformatics Technologies
                         </p>
-                        <div className="">
-                            <Button title={"Learn More"} />
+                        <div className="mt-6">
                             <Button title={"Enroll Now"} />
                         </div>
 

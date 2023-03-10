@@ -9,14 +9,18 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
-    screens: {
-      xs: "350px",
-      sm: "500px",
-      md: "640px",
-      lg: "768px",
-      "lg-2": "868px"
-    }
+    extend: {
+      colors: {
+        primary: "#00616C"
+      }
+    },
+    // screens: {
+    //   xs: "350px",
+    //   sm: "500px",
+    //   md: "640px",
+    //   lg: "768px",
+    //   "lg-2": "868px"
+    // }
   },
 
   plugins: [],
