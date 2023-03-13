@@ -42,7 +42,7 @@ const BottomSection = () => {
                         </h3>
 
                         <p className="text-slate-700 text-lg my-8 max-w-2xl">
-                            As a graduate of this program, you will own valuable products such as Full-Stack App Templates, AR and VR Experiences, and APIs that are marketed globally by the Panaverse DAO. You will also have the opportunity to offer your services at a rate of 50dollar per hour, providing a path to financial stability while contributing to the growth of Pakistan's software exports.
+                            As a graduate of this program, you will own valuable products such as Full-Stack App Templates, AR and VR Experiences, and APIs that are marketed globally by the Panaverse DAO. You will also have the opportunity to offer your services at a rate of $50 per hour, providing a path to financial stability while contributing to the growth of Pakistans software exports.
                         </p>
 
                         <div className="flex flex-wrap flex-col md:flex-row md:items-center">
