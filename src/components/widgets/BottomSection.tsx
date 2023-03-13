@@ -37,11 +37,11 @@ const BottomSection = () => {
 
                     {/* Rigth Box */}
                     <div className="basis-6/12 flex flex-col justify-center">
-                        <h3 className="font-bold text-4xl">
+                        <h3 className="font-extrabold text-4xl max-w-xl">
                             The Outcome for Participants of the Program
                         </h3>
 
-                        <p className="text-slate-700 text-lg my-8 max-w-2xl">
+                        <p className="text-slate-700 my-8 max-w-2xl">
                             As a graduate of this program, you will own valuable products such as Full-Stack App Templates, AR and VR Experiences, and APIs that are marketed globally by the Panaverse DAO. You will also have the opportunity to offer your services at a rate of $50 per hour, providing a path to financial stability while contributing to the growth of Pakistans software exports.
                         </p>
 

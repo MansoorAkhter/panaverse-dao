@@ -13,7 +13,7 @@ const Hero = () => {
                         <h4 className="text-[#00616C] font-semibold mt-4">
                             Presidential Initiative for Artificial Intelligence and Computing (PIAIC)
                         </h4>
-                        <h1 className="text-5xl font-bold sm:text-6xl my-3">
+                        <h1 className="text-5xl font-extrabold sm:text-6xl my-3">
                             Certified Web 3.0 and Metaverse Developer
                         </h1>
 

@@ -1,3 +1,5 @@
+const { fontFamily } = require('tailwindcss/defaultTheme')
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -12,7 +14,10 @@ module.exports = {
     extend: {
       colors: {
         primary: "#00616C"
-      }
+      },
+      fontFamily: {
+        sans: ['var(--font-manrope)', ...fontFamily.sans],
+      },
     },
     // screens: {
     //   xs: "350px",
