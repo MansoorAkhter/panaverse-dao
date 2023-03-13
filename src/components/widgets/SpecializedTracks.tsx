@@ -1,5 +1,12 @@
 import QuarterBox from "../shared/QuarterBox";
 import Wrapper from "../shared/Wrapper";
+import image1 from "../../assets/images/image1.png";
+import image2 from "../../assets/images/image2.png";
+import image3 from "../../assets/images/image3.png";
+import image4 from "../../assets/images/image4.png";
+import image5 from "../../assets/images/image5.png";
+import image6 from "../../assets/images/image6.png";
+import Image from "next/image";
 
 const SpecializedTracks = () => {
     return (
@@ -13,6 +20,7 @@ const SpecializedTracks = () => {
 
                     <div className="flex my-10 gap-x-6 gap-y-8">
 
+                        {/* Left box */}
                         <div className="shadow-xl basis-8/12 rounded-md px-8 py-6 border border-[#00616C4D]">
                             <h4 className="font-medium text-primary">
                                 Specialized Program
@@ -30,7 +38,7 @@ const SpecializedTracks = () => {
                                 </svg>
                             </button>
 
-                            <div className="flex gap-x-4">
+                            <div className="flex gap-x-4 mt-28">
                                 <QuarterBox title="Quarter IV" num={4} haveBorder={false}
                                     desc="W2-201: Developing Planet-Scale Web 2.0 Serverless Cloud Cloud Apps and APIs using Next.js 13 and Cloud Development Kit (CDK) for Terraform" />
                                 <QuarterBox title="Quarter V" num={5} haveBorder={false}
@@ -40,19 +48,22 @@ const SpecializedTracks = () => {
 
 
                         {/* Right Box */}
-                        <div className="bg-slate-100 py-8 px-6 basis-4/12">
+                        <div className="py-6 px-6 basis-4/12">
 
-                            <div className="flex items-center gap-x-4">
-                                <div className="bg-green-300 h-16 w-32 rounded"></div>
-                                <div className="bg-gradient-to-br from-[#0B4DD0] to-[#00E5FF] h-16 w-32 rounded"></div>
-                                <div className="">
-                                    <h4 className="font-medium text-primary text-sm">Specialized Program</h4>
-                                    <h3 className="font-bold text-lg">
-                                        Web 3.0 (Blockchain) and Metaverse Specialization
-                                    </h3>
+                            {SpecializedTracksData.map((item) => (<>
+                                <div className="flex items-center gap-x-4 cursor-pointer">
+                                    <div className="flex items-center h-24 w-28">
+                                        <Image src={item.image} alt="image" className="hover:ml-1.5 hover:mb-3 duration-300 absolute z-10" />
+                                        <div className="bg-gradient-to-br from-[#0B4DD0] to-[#00E5FF] h-[80px] w-[110px] rounded absolute -z-0" />
+                                    </div>
+
+                                    <div className="flex-1">
+                                        <h4 className="font-medium text-primary text-sm">{item.header}</h4>
+                                        <h3 className="font-bold text-lg">{item.program}</h3>
+                                    </div>
                                 </div>
-                            </div>
-                            <div className="h-[2px] w-[368px] bg-gray-200 mt-4" />
+                                <div className="h-[2px] w-[368px] bg-gray-200 my-3" />
+                            </>))}
 
                         </div>
 
@@ -71,25 +82,31 @@ const SpecializedTracksData = [
     {
         header: "Specialized Program",
         program: "Web 3.0 (Blockchain) and Metaverse Specialization",
+        image: image1
     },
     {
         header: "Specialized Program",
         program: "Artificial Intelligence (AI) and Deep Learning Specialization",
+        image: image2
     },
     {
         header: "Specialized Program",
         program: "Web 3.0 (Blockchain) and Metaverse Specialization",
+        image: image3
     },
     {
         header: "Specialized Program",
         program: "Artificial Intelligence (AI) and Deep Learning Specialization",
+        image: image4
     },
     {
         header: "Specialized Program",
         program: "Web 3.0 (Blockchain) and Metaverse Specialization",
+        image: image5
     },
     {
         header: "Specialized Program",
         program: "Artificial Intelligence (AI) and Deep Learning Specialization",
+        image: image6
     },
 ]
