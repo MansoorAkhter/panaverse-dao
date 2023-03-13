@@ -27,23 +27,21 @@ const BottomSection = () => {
     return (
         <section>
             <Wrapper>
-                <div className="flex flex-col md:flex-row mt-10">
+                <div className="flex flex-col md:flex-row my-32">
                     {/* Left Box */}
                     <div className="basis-6/12 flex justify-center items-center" >
                         <Image src={female} alt="Corporate Women" className="" />
                         {/* <div className="w-6 h-6 bg-teal-400 rounded-md origin-center rotate-45 absolute left-10" />
-                        <div className="w-6 h-6 bg-blue-700 rounded-md origin-center rotate-45 absolute top-20 left-[440px]" />
-                        <div className="w-6 h-6 bg-teal-800 rounded-md origin-center rotate-45 absolute top-36 left-32" />
-                        <div className="w-6 h-6 bg-green-400 rounded-md origin-center rotate-45 absolute bottom-4 left-[480px]" /> */}
+                        */}
                     </div>
 
                     {/* Rigth Box */}
-                    <div className="basis-6/12 flex flex-col justify-center items-center">
+                    <div className="basis-6/12 flex flex-col justify-center">
                         <h3 className="font-bold text-4xl">
                             The Outcome for Participants of the Program
                         </h3>
 
-                        <p className="text-slate-700 my-6">
+                        <p className="text-slate-700 text-lg my-8 max-w-2xl">
                             As a graduate of this program, you will own valuable products such as Full-Stack App Templates, AR and VR Experiences, and APIs that are marketed globally by the Panaverse DAO. You will also have the opportunity to offer your services at a rate of $50 per hour, providing a path to financial stability while contributing to the growth of Pakistan's software exports.
                         </p>
 

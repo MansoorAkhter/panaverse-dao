@@ -13,12 +13,12 @@ const SpecializedTracks = () => {
         <section>
             <Wrapper>
                 <div className="">
-                    <h2 className="text-4xl font-bold">Specialized Tracks:</h2>
-                    <p className="text-slate-700 max-w-xl mt-4">
+                    <h2 className="md:text-4xl text-2xl font-bold">Specialized Tracks:</h2>
+                    <p className="text-slate-700 md:max-w-xl max-w-xs mt-4">
                         After completing the first three quarters the participants will select one or more specializations consisting of two courses each:
                     </p>
 
-                    <div className="flex my-10 gap-x-6 gap-y-8">
+                    <div className="flex flex-col md:flex-row my-10 gap-x-6 gap-y-8">
 
                         {/* Left box */}
                         <div className="shadow-xl basis-8/12 rounded-md px-8 py-6 border border-[#00616C4D]">
@@ -38,7 +38,7 @@ const SpecializedTracks = () => {
                                 </svg>
                             </button>
 
-                            <div className="flex gap-x-4 mt-28">
+                            <div className="flex flex-col md:flex-row gap-x-4 mt-28">
                                 <QuarterBox title="Quarter IV" num={4} haveBorder={false}
                                     desc="W2-201: Developing Planet-Scale Web 2.0 Serverless Cloud Cloud Apps and APIs using Next.js 13 and Cloud Development Kit (CDK) for Terraform" />
                                 <QuarterBox title="Quarter V" num={5} haveBorder={false}
@@ -62,7 +62,7 @@ const SpecializedTracks = () => {
                                         <h3 className="font-bold text-lg">{item.program}</h3>
                                     </div>
                                 </div>
-                                <div className="h-[2px] w-[368px] bg-gray-200 my-3" />
+                                <div className="h-[2px] bg-gray-200 my-3" />
                             </>))}
 
                         </div>

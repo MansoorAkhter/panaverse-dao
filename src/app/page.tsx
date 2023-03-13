@@ -15,7 +15,7 @@ export default function Home() {
         <SpecializedTracks />
 
         <div className="relative">
-          <div className="w-60 h-60 bg-teal-200 absolute -z-50 blur-[135px] top-52 -right-5" />
+          <div className="w-60 h-60 bg-teal-300 absolute -z-50 blur-[150px] top-44 -right-2" />
           <BottomSection />
         </div>
       </main>
