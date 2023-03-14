@@ -3,19 +3,11 @@ import CoreTracks from "@/components/widgets/CoreTracks";
 import Footer from "@/components/widgets/Footer";
 import Hero from "@/components/widgets/Hero";
 import SpecializedTracks from "@/components/widgets/SpecializedTracks";
-import { Manrope } from 'next/font/google'
-
-const manrope = Manrope({
-  weight: ['300', '400', '500', '600', '700', '800'],
-  style: ['normal'],
-  subsets: ['latin'],
-  variable: '--font-manrope',
-})
 
 export default function Home() {
   return (
     <>
-      <main className={`${manrope.variable} font-sans`}>
+      <main>
         <div className="relative">
           <Hero />
           <div className="w-60 h-60 bg-teal-400 absolute -z-50 blur-[135px] mt-20 -ml-[70px]" />
