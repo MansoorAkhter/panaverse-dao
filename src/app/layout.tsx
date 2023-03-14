@@ -1,4 +1,3 @@
-'use client';
 import './globals.css';
 import Header from '@/components/layout/Header';
 import { Manrope } from 'next/font/google'
@@ -9,10 +8,8 @@ export const metadata = {
 }
 
 const manrope = Manrope({
-  weight: ['300', '400', '500', '600', '700', '800'],
-  style: ['normal'],
   subsets: ['latin'],
-  variable: '--font-manrope',
+  display: 'swap',
 })
 
 export default function RootLayout({
@@ -21,14 +18,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <head>
-        <style jsx global>{`
-        html {
-          font-family: ${manrope.style.fontFamily};
-        }
-      `}</style>
-      </head>
+    <html lang="en" className={manrope.className}>
       <body>
         <Header />
         {children}
