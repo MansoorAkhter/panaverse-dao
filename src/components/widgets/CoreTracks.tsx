@@ -29,7 +29,7 @@ const CoreTracks = () => {
                     <h4 className="uppercase font-bold text-lg text-primary">
                         Program of Studies
                     </h4>
-                    <h2 className="text-4xl font-bold my-4 whitespace-pre-line">Core Courses {`\n`}
+                    <h2 className="text-4xl font-extrabold my-4 whitespace-pre-line">Core Courses {`\n`}
                         (Common in All Specializations):
                     </h2>
                     <p className="text-slate-700">

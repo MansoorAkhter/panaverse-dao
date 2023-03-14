@@ -1,19 +1,20 @@
+import Image from "next/image";
 import QuarterBox from "../shared/QuarterBox";
 import Wrapper from "../shared/Wrapper";
+
 import image1 from "../../assets/images/image1.png";
 import image2 from "../../assets/images/image2.png";
 import image3 from "../../assets/images/image3.png";
 import image4 from "../../assets/images/image4.png";
 import image5 from "../../assets/images/image5.png";
 import image6 from "../../assets/images/image6.png";
-import Image from "next/image";
 
 const SpecializedTracks = () => {
     return (
         <section>
             <Wrapper>
                 <div className="">
-                    <h2 className="md:text-4xl text-2xl font-bold">Specialized Tracks:</h2>
+                    <h2 className="md:text-4xl text-2xl font-extrabold ">Specialized Tracks:</h2>
                     <p className="text-slate-700 md:max-w-xl max-w-xs mt-4">
                         After completing the first three quarters the participants will select one or more specializations consisting of two courses each:
                     </p>
@@ -25,7 +26,7 @@ const SpecializedTracks = () => {
                             <h4 className="font-medium text-primary">
                                 Specialized Program
                             </h4>
-                            <h3 className="text-3xl font-semibold max-w-lg my-4">
+                            <h3 className="text-3xl font-bold max-w-lg my-4">
                                 Web 3.0 (Blockchain) and Metaverse Specialization
                             </h3>
                             <p className="text-slate-700 text-lg max-w-2xl">
