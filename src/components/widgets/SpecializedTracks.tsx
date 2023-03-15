@@ -1,3 +1,4 @@
+'use client'
 import Image from "next/image";
 import QuarterBox from "../shared/QuarterBox";
 import Wrapper from "../shared/Wrapper";
@@ -8,8 +9,13 @@ import image3 from "../../assets/images/image3.png";
 import image4 from "../../assets/images/image4.png";
 import image5 from "../../assets/images/image5.png";
 import image6 from "../../assets/images/image6.png";
+import { useState } from "react";
 
 const SpecializedTracks = () => {
+    const [selectedItem, setSelectedItem] = useState("wmd");
+    const selectedData = programsData.find((item) => item.slug === selectedItem);
+    console.log(selectedData);
+
     return (
         <section>
             <Wrapper>
@@ -51,16 +57,16 @@ const SpecializedTracks = () => {
                         {/* Right Box */}
                         <div className="py-6 px-6 basis-4/12">
 
-                            {SpecializedTracksData.map((item) => (<>
-                                <div className="flex items-center gap-x-4 cursor-pointer">
+                            {programsData.map((item) => (<>
+                                <div key={item.slug} className="flex items-center gap-x-4 cursor-pointer group">
                                     <div className="flex items-center h-24 w-28">
-                                        <Image src={item.image} alt="image" className="hover:ml-1.5 hover:mb-3 duration-300 absolute z-10" />
+                                        <Image src={item.image} alt="image" className="group-hover:ml-1.5 group-hover:mb-3 duration-300 absolute z-10" />
                                         <div className="bg-gradient-to-br from-[#0B4DD0] to-[#00E5FF] h-[80px] w-[110px] rounded absolute -z-0" />
                                     </div>
 
                                     <div className="flex-1">
-                                        <h4 className="font-medium text-primary text-sm">{item.header}</h4>
-                                        <h3 className="font-bold text-lg">{item.program}</h3>
+                                        <h4 className="font-medium text-primary text-sm">Specialized Track</h4>
+                                        <h3 className="font-extrabold text-md">{item.program}</h3>
                                     </div>
                                 </div>
                                 <div className="h-[2px] bg-gray-200 my-3" />
@@ -79,35 +85,35 @@ const SpecializedTracks = () => {
 export default SpecializedTracks;
 
 
-const SpecializedTracksData = [
+const programsData = [
     {
-        header: "Specialized Program",
+        slug: "wmd",
         program: "Web 3.0 (Blockchain) and Metaverse Specialization",
         image: image1
     },
     {
-        header: "Specialized Program",
+        slug: "ai",
         program: "Artificial Intelligence (AI) and Deep Learning Specialization",
         image: image2
     },
     {
-        header: "Specialized Program",
-        program: "Web 3.0 (Blockchain) and Metaverse Specialization",
+        slug: "cnc",
+        program: "Cloud-Native Computing Specialization",
         image: image3
     },
     {
-        header: "Specialized Program",
-        program: "Artificial Intelligence (AI) and Deep Learning Specialization",
+        slug: "ac",
+        program: "Ambient Computing and IoT Specialization",
         image: image4
     },
     {
-        header: "Specialized Program",
-        program: "Web 3.0 (Blockchain) and Metaverse Specialization",
+        slug: "gbs",
+        program: "Genomics and Bioinformatics Specialization",
         image: image5
     },
     {
-        header: "Specialized Program",
-        program: "Artificial Intelligence (AI) and Deep Learning Specialization",
+        slug: "npa",
+        program: "Network Programmability and Automation Specialization",
         image: image6
     },
 ]
