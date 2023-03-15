@@ -14,7 +14,8 @@ import { useState } from "react";
 const SpecializedTracks = () => {
     const [selectedItem, setSelectedItem] = useState("wmd");
     const selectedData = programsData.find((item) => item.slug === selectedItem);
-    console.log(selectedData);
+
+    // console.log(selectedItem, "=============");
 
     return (
         <section>
@@ -33,10 +34,10 @@ const SpecializedTracks = () => {
                                 Specialized Program
                             </h4>
                             <h3 className="text-3xl font-bold max-w-lg my-4">
-                                Web 3.0 (Blockchain) and Metaverse Specialization
+                                {selectedData?.program}
                             </h3>
                             <p className="text-slate-700 text-lg max-w-2xl">
-                                This Web 3.0 and Metaverse specialization focuses on developing full-stack Web 3.0 and Metaverse experiences for the next generation of the internet by specializing in building worlds that merge the best of cutting-edge decentralized distributed blockchains with 3D metaverse client experiences.
+                                {selectedData?.programDesc}
                             </p>
                             <button className="font-semibold text-primary underline mt-2 flex items-center gap-x-1">
                                 Learn More
@@ -45,20 +46,20 @@ const SpecializedTracks = () => {
                                 </svg>
                             </button>
 
-                            <div className="flex flex-col md:flex-row gap-x-4 mt-28">
-                                <QuarterBox title="Quarter IV" num={4} haveBorder={false}
-                                    desc="W2-201: Developing Planet-Scale Web 2.0 Serverless Cloud Cloud Apps and APIs using Next.js 13 and Cloud Development Kit (CDK) for Terraform" />
-                                <QuarterBox title="Quarter V" num={5} haveBorder={false}
-                                    desc="W2-201: Developing Planet-Scale Web 2.0 Serverless Cloud Cloud Apps and APIs using Next.js 13 and Cloud Development Kit (CDK) for Terraform" />
+                            <div className="flex flex-col md:flex-row gap-x-4 mt-20">
+                                {selectedData?.quarters.map((item) => (<QuarterBox title={item.quarter} num={item.num} haveBorder={false}
+                                    desc={item.description} />))}
                             </div>
                         </div>
+
+
 
 
                         {/* Right Box */}
                         <div className="py-6 px-6 basis-4/12">
 
                             {programsData.map((item) => (<>
-                                <div key={item.slug} className="flex items-center gap-x-4 cursor-pointer group">
+                                <div onClick={() => setSelectedItem(item.slug)} key={item.slug} className="flex items-center gap-x-4 cursor-pointer group">
                                     <div className="flex items-center h-24 w-28">
                                         <Image src={item.image} alt="image" className="group-hover:ml-1.5 group-hover:mb-3 duration-300 absolute z-10" />
                                         <div className="bg-gradient-to-br from-[#0B4DD0] to-[#00E5FF] h-[80px] w-[110px] rounded absolute -z-0" />
@@ -88,32 +89,110 @@ export default SpecializedTracks;
 const programsData = [
     {
         slug: "wmd",
+        image: image1,
         program: "Web 3.0 (Blockchain) and Metaverse Specialization",
-        image: image1
+        programDesc: "This Web 3.0 and Metaverse specialization focuses on developing full-stack Web 3.0 and Metaverse experiences for the next generation of the internet by specializing in building worlds that merge the best of cutting-edge decentralized distributed blockchains with 3D metaverse client experiences.",
+        quarters: [
+            {
+                num: 4,
+                quarter: "Quarter IV",
+                description: "W3-351: Developing Smart Contracts and Planet-Scale Web 3.0 Dapps",
+            },
+            {
+                num: 5,
+                quarter: "Quarter V",
+                description: "MV-361: Developing Planet-Scale Open Virtual and Augmented Metaverse Experiences",
+            },
+        ]
     },
     {
         slug: "ai",
         program: "Artificial Intelligence (AI) and Deep Learning Specialization",
-        image: image2
+        image: image2,
+        programDesc: "The AI and Deep Learning specialization focuses on building and deploying intelligent APIs using OpenAI models and building custom Deep Learning Tensorflow models.",
+        quarters: [
+            {
+                num: 4,
+                quarter: "Quarter IV",
+                description: "AI-351: Developing Planet-Scale Intelligent APIs and Python Programming",
+            },
+            {
+                num: 5,
+                quarter: "Quarter V",
+                description: "AI-361: Deep Learning and MLOps",
+            },
+        ]
     },
     {
         slug: "cnc",
         program: "Cloud-Native Computing Specialization",
-        image: image3
+        image: image3,
+        programDesc: "The Cloud-Native Computing Specialization focuses on Containers, Kubernetes, and CDK for Kubernetes.",
+        quarters: [
+            {
+                num: 4,
+                quarter: "Quarter IV",
+                description: "CN-351: Certified Kubernetes Application Developer (CKAD)",
+            },
+            {
+                num: 5,
+                quarter: "Quarter V",
+                description: "CN-361: Developing Multi-Cloud Apps using CDK for Terraform",
+            },
+        ]
     },
     {
         slug: "ac",
         program: "Ambient Computing and IoT Specialization",
-        image: image4
+        image: image4,
+        programDesc: "The Ambient Computing and IoT Specialization focuses on building Smart Homes, Offices, Factories, and Cities using Voice computing, Matter Protocol, and Embedded Devices.",
+        quarters: [
+            {
+                num: 4,
+                quarter: "Quarter IV",
+                description: "AC-351: Ambient Computing with Voice Assistants and Matter Devices",
+            },
+            {
+                num: 5,
+                quarter: "Quarter V",
+                description: "AC-361: Embedded Programming using C and Rust",
+            },
+        ]
     },
     {
         slug: "gbs",
         program: "Genomics and Bioinformatics Specialization",
-        image: image5
+        image: image5,
+        programDesc: "Genomics is the study of the total genetic makeup of individual organisms, and how this genetic information is structured, functions, and has evolved; bioinformatics encompasses a diverse range of analytical methods and tools applied to genomic data. This Specialization focuses on performing complex bioinformatics analysis using the most essential Python libraries and applications.",
+        quarters: [
+            {
+                num: 4,
+                quarter: "Quarter IV",
+                description: "Bio-351: Python for Biologists",
+            },
+            {
+                num: 5,
+                quarter: "Quarter V",
+                description: "Bio-361: Bioinformatics with Python",
+            },
+        ]
     },
     {
         slug: "npa",
         program: "Network Programmability and Automation Specialization",
-        image: image6
+        image: image6,
+        programDesc: "More than ever, network engineers are finding it challenging to complete their duties entirely manually. Network automation is now crucial due to new protocols, technologies, delivery models, and the requirement for enterprises to become more adaptable and agile. This course teaches network engineers how to automate systems with code using a variety of technologies and tools, including Linux, Python, APIs, and Git.",
+        quarters: [
+            {
+                num: 4,
+                quarter: "Quarter IV",
+                description: "NPA-351: CCNA 200-301 Certification",
+            },
+            {
+                num: 5,
+                quarter: "Quarter V",
+                description: "NPA-361: Network Programmability and Automation",
+            },
+        ]
     },
 ]
