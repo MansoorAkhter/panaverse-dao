@@ -47,8 +47,12 @@ const SpecializedTracks = () => {
                             </button>
 
                             <div className="flex flex-col md:flex-row gap-x-4 mt-20">
-                                {selectedData?.quarters.map((item) => (<QuarterBox title={item.quarter} num={item.num} haveBorder={false}
-                                    desc={item.description} />))}
+                                {selectedData?.quarters.map((item) => (
+                                    <span key={item.num}>
+                                        <QuarterBox title={item.quarter} num={item.num} haveBorder={false}
+                                            desc={item.description} />
+                                    </span>
+                                ))}
                             </div>
                         </div>
 
