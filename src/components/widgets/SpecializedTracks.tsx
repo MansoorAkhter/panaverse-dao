@@ -39,7 +39,7 @@ const SpecializedTracks = () => {
                             <p className="text-slate-700 text-md sm:text-lg">
                                 {selectedData?.programDesc}
                             </p>
-                            <button className="font-semibold text-primary underline mt-2 flex items-center gap-x-1">
+                            <button className="font-semibold text-primary border border-primary rounded-lg py-1 px-2 mt-2 flex items-center gap-x-1">
                                 Learn More
                                 <svg className="mt-1" width="8" height="11" viewBox="0 0 8 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M1.00006 10.0368L6.06801 5.57117L1.09503 0.999994" stroke="#00616C" strokeWidth="2" />
