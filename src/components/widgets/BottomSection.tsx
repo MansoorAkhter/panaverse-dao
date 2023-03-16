@@ -5,34 +5,15 @@ import polygonIcon from "../../assets/images/polygonIcon.png"
 
 const BottomSection = () => {
 
-    const checkBTN = [
-        {
-            name: "Product Ownership",
-            icon: polygonIcon
-        },
-        {
-            name: "Freelacing",
-            icon: polygonIcon
-        },
-        {
-            name: "Global Marketing by DAO",
-            icon: polygonIcon
-        },
-        {
-            name: "Boosting Economy",
-            icon: polygonIcon
-        },
-    ]
+    const checkBTN = ["Product Ownership", "Freelacing", "Global Marketing by DAO", "Boosting Economy"]
 
     return (
         <section>
             <Wrapper>
                 <div className="flex flex-col-reverse md:flex-row my-32">
                     {/* Left Box */}
-                    <div className="basis-6/12 flex justify-center items-center" >
-                        <Image src={female} alt="Corporate Women" className="" />
-                        {/* <div className="w-6 h-6 bg-teal-400 rounded-md origin-center rotate-45 absolute left-10" />
-                        */}
+                    <div className="basis-6/12 flex justify-center items-center mt-16 md:mt-0" >
+                        <Image src={female} alt="Corporate Women" />
                     </div>
 
                     {/* Rigth Box */}
@@ -45,11 +26,11 @@ const BottomSection = () => {
                             As a graduate of this program, you will own valuable products such as Full-Stack App Templates, AR and VR Experiences, and APIs that are marketed globally by the Panaverse DAO. You will also have the opportunity to offer your services at a rate of $50 per hour, providing a path to financial stability while contributing to the growth of Pakistans software exports.
                         </p>
 
-                        <div className="flex flex-wrap flex-col md:flex-row md:items-center">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-2 gap-y-4">
                             {checkBTN.map((item, index) => (
-                                <div key={index} className="flex items-center gap-x-3 mb-8 md:w-[50%]">
-                                    <Image src={item.icon} alt="check icon" className="w-auto h-auto" />
-                                    <h4 className="font-medium text-lg">{item.name}</h4>
+                                <div key={index} className="flex items-center gap-x-3 mb:2 sm:mb-8">
+                                    <Image src={polygonIcon} alt="check icon" className="w-auto h-auto" />
+                                    <h4 className="font-medium text-lg">{item}</h4>
                                 </div>
                             ))}
                         </div>

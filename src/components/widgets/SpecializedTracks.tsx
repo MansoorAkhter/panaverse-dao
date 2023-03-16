@@ -29,7 +29,7 @@ const SpecializedTracks = () => {
                     <div className="flex flex-col-reverse lg:flex-row my-10 gap-x-6 gap-y-8">
 
                         {/* Left box */}
-                        <div className="shadow-xl basis-8/12 rounded-md p-8 border border-[#00616C4D] top-10 sticky self-start">
+                        <div className="shadow-xl basis-8/12 rounded-md p-8 border border-[#00616C4D] top-24 sticky self-start">
                             <h4 className="font-medium text-primary">
                                 Specialized Program
                             </h4>
