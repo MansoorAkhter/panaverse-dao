@@ -27,7 +27,7 @@ const BottomSection = () => {
     return (
         <section>
             <Wrapper>
-                <div className="flex flex-col md:flex-row my-32">
+                <div className="flex flex-col-reverse md:flex-row my-32">
                     {/* Left Box */}
                     <div className="basis-6/12 flex justify-center items-center" >
                         <Image src={female} alt="Corporate Women" className="" />
@@ -41,14 +41,14 @@ const BottomSection = () => {
                             The Outcome for Participants of the Program
                         </h3>
 
-                        <p className="text-slate-700 my-8 max-w-2xl">
+                        <p className="text-slate-700 my-8 max-w-2xl text-justify md:text-left">
                             As a graduate of this program, you will own valuable products such as Full-Stack App Templates, AR and VR Experiences, and APIs that are marketed globally by the Panaverse DAO. You will also have the opportunity to offer your services at a rate of $50 per hour, providing a path to financial stability while contributing to the growth of Pakistans software exports.
                         </p>
 
                         <div className="flex flex-wrap flex-col md:flex-row md:items-center">
                             {checkBTN.map((item, index) => (
                                 <div key={index} className="flex items-center gap-x-3 mb-8 md:w-[50%]">
-                                    <Image src={item.icon} alt="Corporate Women" className="" />
+                                    <Image src={item.icon} alt="check icon" className="w-auto h-auto" />
                                     <h4 className="font-medium text-lg">{item.name}</h4>
                                 </div>
                             ))}

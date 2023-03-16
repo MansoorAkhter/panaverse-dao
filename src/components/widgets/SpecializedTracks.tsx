@@ -22,14 +22,14 @@ const SpecializedTracks = () => {
             <Wrapper>
                 <div className="">
                     <h2 className="md:text-4xl text-2xl font-extrabold ">Specialized Tracks:</h2>
-                    <p className="text-slate-700 md:max-w-xl max-w-xs mt-4">
+                    <p className="text-slate-700 md:max-w-xl mt-4">
                         After completing the first three quarters the participants will select one or more specializations consisting of two courses each:
                     </p>
 
                     <div className="flex flex-col-reverse lg:flex-row my-10 gap-x-6 gap-y-8">
 
                         {/* Left box */}
-                        <div className="shadow-xl basis-8/12 rounded-md px-8 py-6 border border-[#00616C4D]">
+                        <div className="shadow-xl basis-8/12 rounded-md p-8 border border-[#00616C4D] top-10 sticky self-start">
                             <h4 className="font-medium text-primary">
                                 Specialized Program
                             </h4>
@@ -46,7 +46,7 @@ const SpecializedTracks = () => {
                                 </svg>
                             </button>
 
-                            <div className="flex flex-col md:flex-row gap-x-4 mt-20">
+                            <div className="flex flex-col md:flex-row gap-x-4 mt-8 sm:mt-20">
                                 {selectedData?.quarters.map((item) => (
                                     <span key={item.num}>
                                         <QuarterBox title={item.quarter} num={item.num} haveBorder={false}
@@ -60,7 +60,7 @@ const SpecializedTracks = () => {
 
 
                         {/* Right Box */}
-                        <div className="py-6 px-6 basis-4/12">
+                        <div className="sm:py-6 sm:px-6 basis-4/12">
 
                             {programsData.map((item) => (<>
                                 <div onClick={() => setSelectedItem(item.slug)} key={item.slug} className="flex items-center gap-x-4 cursor-pointer group">
@@ -71,7 +71,7 @@ const SpecializedTracks = () => {
 
                                     <div className="flex-1">
                                         <h4 className="font-medium text-primary text-sm">Specialized Track</h4>
-                                        <h3 className="font-extrabold text-md">{item.program}</h3>
+                                        <h3 className="font-bold text-md">{item.program}</h3>
                                     </div>
                                 </div>
                                 <div className="h-[2px] bg-gray-200 my-3" />
