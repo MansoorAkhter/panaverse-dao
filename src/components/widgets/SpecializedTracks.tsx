@@ -33,10 +33,10 @@ const SpecializedTracks = () => {
                             <h4 className="font-medium text-primary">
                                 Specialized Program
                             </h4>
-                            <h3 className="text-3xl font-bold max-w-lg my-4">
+                            <h3 className="text-lg sm:text-3xl font-bold max-w-lg my-4">
                                 {selectedData?.program}
                             </h3>
-                            <p className="text-slate-700 text-lg max-w-2xl">
+                            <p className="text-slate-700 text-md sm:text-lg">
                                 {selectedData?.programDesc}
                             </p>
                             <button className="font-semibold text-primary underline mt-2 flex items-center gap-x-1">
