@@ -26,7 +26,7 @@ const SpecializedTracks = () => {
                         After completing the first three quarters the participants will select one or more specializations consisting of two courses each:
                     </p>
 
-                    <div className="flex flex-col md:flex-row my-10 gap-x-6 gap-y-8">
+                    <div className="flex flex-col-reverse lg:flex-row my-10 gap-x-6 gap-y-8">
 
                         {/* Left box */}
                         <div className="shadow-xl basis-8/12 rounded-md px-8 py-6 border border-[#00616C4D]">

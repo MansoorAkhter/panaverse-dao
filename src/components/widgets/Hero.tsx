@@ -9,11 +9,11 @@ const Hero = () => {
         <section>
             <Wrapper>
                 <div className="flex flex-col md:flex-row items-center">
-                    <div className="flex-1 leading-normal  w-[569px]">
+                    <div className="flex-1 leading-normal">
                         <h4 className="text-[#00616C] font-semibold mt-4">
                             Presidential Initiative for Artificial Intelligence and Computing (PIAIC)
                         </h4>
-                        <h1 className="text-5xl font-extrabold sm:text-6xl my-3">
+                        <h1 className="text-4xl font-extrabold sm:text-6xl my-3">
                             Certified Web 3.0 and Metaverse Developer
                         </h1>
 
@@ -29,7 +29,7 @@ const Hero = () => {
 
                     </div>
 
-                    <div className="flex-1 justify-end items-center flex">
+                    <div className="flex flex-1 justify-end items-center">
                         <Image src={heroPoster} alt="Hero Poster" className="md:max-w-xl" style={{ width: "100%", height: "auto" }} />
                     </div>
                 </div>
